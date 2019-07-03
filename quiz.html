@@ -1,0 +1,583 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SB Online Quiz - Homepage</title>
+    <!-- <link rel="stylesheet" href="particles.css"> -->
+    <script type="text/javascript">
+      function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+  </script>
+    <link rel="stylesheet" href="particles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background: transparent" onload="myfun()">
+  <div id="particles-js" style="position: fixed"></div>
+        <section>
+
+    
+        <article>
+        <p class="h2">Java Assessment</p>
+        <p class="h5" style="display: inline">Name : </p>
+        <p style="display: inline" id="displayName">email</p><br>
+        <p class="h5" style="display: inline">No of Tests Available : </p>
+        <p style="display: inline" id="displayTest">1 or 2</p><br>
+        </article>
+        <aside>
+          <a href="index.html"><button class="btn btn-danger" onclick="myfun1()">LogOut</button></a>
+
+        </aside>
+              <!-- Button trigger modal -->
+<!-- Button trigger modal -->
+<header style="text-align: center">
+<button type="button" id="summa" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-top: 0.5rem">
+        Please Read It
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Instruction to be Followed</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet et quidem amet accusamus vel nemo assumenda, distinctio totam nulla ipsa. Maiores, eveniet. Maxime quisquam cumque beatae mollitia? Molestias, distinctio minima! </p>
+              <p>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat adipisci doloribus fugiat neque, eius nisi magnam repudiandae? Facilis neque tempore dolor consectetur tenetur laudantium nemo, magnam earum, iure facere ullam.</p>
+              <p>3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus perspiciatis, voluptas possimus suscipit tempora odio ipsum reiciendis maiores explicabo quibusdam aliquam porro repellendus cupiditate obcaecati accusantium nam! Enim, consequatur ducimus.</p>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+
+      <hr style="border:2px solid black;margin-top:2rem">
+
+      <p class="h4">Test Available:</p><br>
+
+      
+</header>
+
+
+  
+
+<!-- card -->
+  
+<footer style="display: flex;justify-content:center">
+  <div class="card testno" style="width: 18rem;padding: 0.5rem">
+    <img src="test.jpg" title="Basic Programming on Java" class="card-img-top" alt="java_img">
+    <div class="card-body">
+      <h5 class="card-title">Java : Assessment</h5>
+      <p class="card-text">Simple Programming in Java
+        Difficulty level : Easy <br>
+        Credits : 1.0
+      </p>
+      <p id="result" style="display:none"></p>
+      <button type="button" id="start" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" onclick="time()">Start Test</button>
+
+        <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" style="padding: 2rem">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">All the Best!</h5>
+                <h5 class="close" id="time">05:00</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+<!-- progress -->
+                    <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                          </div>
+                    
+
+<!-- collapse -->
+                    <div class="accordion" id="accordionExample" style="margin-top:1rem">
+                            <div class="card">
+                              <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Collapsible Group Item #1
+                                  </button>
+                                </h2>
+                              </div>
+                          
+                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  What is the type of variable ‘b’ and ‘d’ in the below snippet?
+                                  <br>
+                                int a[], b;
+                                <br>
+                                int []c, d;
+                                <br>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="0">
+                                  <label class="form-check-label" for="exampleRadios1">
+                                      ‘b’ and ‘d’ are int
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="0">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                      ‘b’ and ‘d’ are arrays of type int
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="1">
+                                  <label class="form-check-label" for="exampleRadios3">
+                                      ‘b’ is int variable; ‘d’ is int array
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios4" value="0">
+                                  <label class="form-check-label" for="exampleRadios4">
+                                      ‘d’ is int variable; ‘b’ is int array
+                                  </label>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Which of these is an incorrect array declaration?
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios5" value="0">
+                                        <label class="form-check-label" for="exampleRadios5">
+                                            int arr[] = new int[5] ;
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios6" value="0">
+                                        <label class="form-check-label" for="exampleRadios6">
+                                            int [] arr = new int[5] ;
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios7" value="0">
+                                        <label class="form-check-label" for="exampleRadios7">
+                                            int arr[];
+                                            arr = new int[5];
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios8" value="1">
+                                        <label class="form-check-label" for="exampleRadios8">
+                                            int arr[] = int [5] new;
+                                        </label>
+                                      </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Collapsible Group Item #3
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    What will this code print?
+
+                                    int arr[] = new int [5];
+                                    System.out.print(arr);
+
+
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios9" value="0">
+                                      <label class="form-check-label" for="exampleRadios9">
+                                          0
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios10" value="0">
+                                      <label class="form-check-label" for="exampleRadios10">
+                                          value stored in arr[0].
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios11" value="0">
+                                      <label class="form-check-label" for="exampleRadios11">
+                                          00000
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios12" value="1">
+                                      <label class="form-check-label" for="exampleRadios12">
+                                          Garbage value
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    Collapsible Group Item #4
+                                  </button>
+                                </h2>
+                              </div>
+                          
+                              <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    What is the output of below snippet?
+
+                                    Object[] names = new String[3];
+                                    names[0] = new Integer(0);
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios13" value="0">
+                                      <label class="form-check-label" for="exampleRadios13">
+                                          ArrayIndexOutOfBoundsException
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios14" value="1">
+                                      <label class="form-check-label" for="exampleRadios14">
+                                          ArrayStoreException
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios15" value="0">
+                                      <label class="form-check-label" for="exampleRadios15">
+                                          Compilation Error
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios16" value="0">
+                                      <label class="form-check-label" for="exampleRadios16">
+                                          Code runs successfully
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Collapsible Group Item #5
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Generics does not work with?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios17" value="0">
+                                      <label class="form-check-label" for="exampleRadios17">
+                                          Set
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios18" value="0">
+                                      <label class="form-check-label" for="exampleRadios18">
+                                          List
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios19" value="0">
+                                      <label class="form-check-label" for="exampleRadios19">
+                                          Tree
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios20" value="1">
+                                      <label class="form-check-label" for="exampleRadios20">
+                                          Array
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Collapsible Group Item #6
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    How to sort an array?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios21" value="0">
+                                      <label class="form-check-label" for="exampleRadios21">
+                                          Array.sort()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios22" value="1">
+                                      <label class="form-check-label" for="exampleRadios22">
+                                          Arrays.sort()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios23" value="0">
+                                      <label class="form-check-label" for="exampleRadios23">
+                                          Collection.sort()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios24" value="0">
+                                      <label class="form-check-label" for="exampleRadios24">
+                                          System.sort()
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingSeven">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    Collapsible Group Item #7
+                                  </button>
+                                </h2>
+                              </div>
+                          
+                              <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    How to copy contents of array?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios25" value="1">
+                                      <label class="form-check-label" for="exampleRadios25">
+                                          System.arrayCopy()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios26" value="0">
+                                      <label class="form-check-label" for="exampleRadios26">
+                                          Array.copy()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios27" value="0">
+                                      <label class="form-check-label" for="exampleRadios27">
+                                          Arrays.copy()
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios28" value="0">
+                                      <label class="form-check-label" for="exampleRadios28">
+                                          Collection.copy()
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingEight">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Collapsible Group Item #8
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseEight" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Can you make an array volatile?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios29" value="1">
+                                      <label class="form-check-label" for="exampleRadios29">
+                                          True
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios30" value="0">
+                                      <label class="form-check-label" for="exampleRadios30">
+                                          False
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingNine">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Collapsible Group Item #9
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseNine" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Where is array stored in memory?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios31" value="1">
+                                      <label class="form-check-label" for="exampleRadios31">
+                                          heap space
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios32" value="0">
+                                      <label class="form-check-label" for="exampleRadios32">
+                                          stack space
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios33" value="0">
+                                      <label class="form-check-label" for="exampleRadios33">
+                                          heap space and stack space
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios9" id="exampleRadios34" value="0">
+                                      <label class="form-check-label" for="exampleRadios34">
+                                          first generation memory
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="headingTen">
+                                <h2 class="mb-0">
+                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Collapsible Group Item #10
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapseTen" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    An array elements are always stored in ________ memory locations?
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios35" value="1">
+                                      <label class="form-check-label" for="exampleRadios35">
+                                          Sequential
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios36" value="0">
+                                      <label class="form-check-label" for="exampleRadios36">
+                                          Random
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios37" value="0">
+                                      <label class="form-check-label" for="exampleRadios37">
+                                          Sequential and Random
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="exampleRadios10" id="exampleRadios38" value="0">
+                                      <label class="form-check-label" for="exampleRadios38">
+                                          Binary search
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+<!-- pageination -->
+                          <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTen">4</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTen">5</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseTen">6</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseTen">7</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseTen">8</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseTen">9</a></li>
+                                  <li class="page-item"><a class="page-link" href="#" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">10</a></li>
+                                </ul>
+                              </nav>
+<!-- Modal -->
+                              <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+        Finish
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to submit?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onclick="sum()" data-dismiss="modal" id="save">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</footer>
+
+</section>
+
+
+
+<!-- stats - count particles -->
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script>
+    let str=window.location.search;
+    let n=str.indexOf("=");
+    str=str.substring(n+1);
+    str=str.replace("%40","@");
+    let displayName=document.getElementById("displayName");
+    displayName.innerHTML=str;
+    var name = localStorage.getItem("key");
+     var myfun=()=>{
+      // console.log(name==str);
+      if(name!=str){
+        var section=document.getElementsByTagName("section")[0];
+        section.innerHTML="<strong>Sorry!</strong> Something Went Wrong <br>Make Sure your internet is connected";
+      }
+     }
+     var myfun1=()=>{
+        localStorage.removeItem("key");
+      }
+    </script>
+<script src="script.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="particles.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

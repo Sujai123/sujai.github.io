@@ -1,0 +1,74 @@
+#login,#register{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 2rem;
+    top:25%;
+    /* transition: 0.5s; */
+}
+#register{
+    transform: scale(0);
+}
+header{
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.display-1{
+    position: absolute;
+    text-align: center;
+    color:#9CC3D5;
+    opacity: 0.8;
+}
+@media screen and (max-width:610px){
+    #login,#register{
+        top:38%;
+    }
+}
+@media screen and (max-width:350px){
+    #login,#register{
+        top:38%;
+        padding:1.5rem;
+    }
+}
+@media screen and (max-width:390px){
+    #login,#register{
+        top:38%;
+    }
+    .display-1{
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width:320px){
+    #login,#register{
+        top:38%;
+    }
+    .display-1{
+        font-size: 4.5rem;
+    }
+}
+@media screen and (max-height:490px){
+    .display-1{
+        font-size: 4.5rem;
+    }
+}
+@media screen and (min-height:1000px){
+    #login,#register{
+        top:38%;
+        font-size: 2rem;
+        padding: 4rem;
+    }
+
+}
+
+.in{
+    transform: scale(0);
+}
+.out{
+    transform: scale(1);
+}
+
+#particles-js{
+    height: 120%;
+}

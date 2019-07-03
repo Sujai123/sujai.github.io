@@ -1,0 +1,40 @@
+section{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+    position: absolute;
+    border-radius: 1rem;
+}
+header p{
+    color: #9CC3D5;
+}
+
+.modal-body p{
+    color: black;
+}
+article{
+    width: 50%;
+}
+aside{
+    display: inline;
+    text-align: right;
+}
+#particles-js{
+    height: 120%;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+@media screen and (max-width:360px){
+    #particles-js{
+        height: 130%;
+    }
+}
