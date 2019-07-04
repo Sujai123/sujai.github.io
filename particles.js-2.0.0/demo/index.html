@@ -17,7 +17,78 @@
 
 <!-- particles.js container -->
 <div id="particles-js"></div>
+<header>
+            <h1 class="display-1">SB Online Quiz</h1>
+            
+        <form id="login" action="quiz.html" method="GET">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertbox" style="display: none">
+                        <strong>Sorry!</strong> Invalid credentials
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertbox4" style="display: none">
+                  <strong>Password</strong> must be of length 5
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" autofocus autocomplete="off">
+                <small id="emailHelp" class="form-text text" >We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> Remember me
+                    </label>
+                  </div>
+                <button  class="btn btn-primary" onclick="return display()">Submit</button>
+                <input type="button" class="btn btn-primary" onclick="toggle1()" value="Register?">
+                </form>
 
+        <form id="register" >
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertbox1" style="display: none">
+                        <strong>Sorry!</strong> Invalid credentials
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertbox2" style="display: none">
+                        <strong>Successfully created!</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertbox3" style="display: none">
+                  <strong>Password</strong> must be of length 5
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off">
+            <small id="emailHelp" class="form-text text">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Re-enter Password">
+            </div>
+            <input type="button"  class="btn btn-primary" onclick="return add()" value="Submit">
+            <input type="button"  class="btn btn-primary" onclick="toggle2()" value="Login?">
+        </form>
+    </header>
+    
 <!-- scripts -->
 <script src="../particles.js"></script>
 <script src="js/app.js"></script>
