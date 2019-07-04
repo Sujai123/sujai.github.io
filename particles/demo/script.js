@@ -1,3 +1,7 @@
+let text="Try username:admin@xyz.com password:12345"
+console.log(text);
+
+
 let toggle1=()=>{
     let form1=document.getElementById("login");
     let form2=document.getElementById("register");
