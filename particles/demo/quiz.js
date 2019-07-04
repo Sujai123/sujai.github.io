@@ -195,11 +195,11 @@ let format=(counter)=>{
     }
     // }
     let text="";
-    if(mm<9)
+    if(mm<=9)
     text+=0;
     text+=mm;
     text+=":";
-    if(ss<9)
+    if(ss<=9)
     text+=0;
     text+=ss+" left";
     let time=document.getElementById("time");
