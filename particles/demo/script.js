@@ -19,7 +19,7 @@ let toggle2=()=>{
 }
 
 var user=[
-    {username:"hello@xyz.com",
+    {username:"admin@xyz.com",
     password:"12345"}
     ];
 let display=()=>{
