@@ -1,0 +1,49 @@
+ <html>
+<head>
+<title>Ajax Demo...</title>
+<style type="text/css">
+  .box{border:1px solid blue;padding:10px}
+</style>
+<script type="text/javascript">
+var req;
+function getContent(url)
+{
+ if(window.ActiveXObject)
+ { 
+  req=new ActiveXObject("Microsoft.XMLHTTP"); 
+ }
+ else if(window.XMLHttpRequest)
+ { 
+  req=new XMLHttpRequest(); 
+ } 
+ req.onreadystatechange=diplayProfile()
+ {
+ if(req.readyState==4)
+ {
+  document.getElementById('contentArea').innerHTML=req.responseText;
+ }
+}
+ req.open('GET',url,true);
+ req.send();
+}
+function clearContent()
+{
+ document.getElementById('contentArea').innerHTML='';
+}
+</script>
+</head>
+<body bgcolor="cyan">
+<h1>Mouse over the image for More Information</h1>
+<img src="hospital.jpg" height="95" width="80" onclick='getContent("project.html")' onmouseout='clearContent()'/>
+<img src="dravid.jpg" height="95" width="80" onmouseover='getContent("chapel.txt")' onmouseout='clearContent()'/>
+<img src="kohli.jpg" height="95" width="80" onmouseover='getContent("emergency.html")' onmouseout='clearContent()'/>
+<img src="raina.jpg" height="95" width="80" onmouseover='getContent("raina.html")' onmouseout='clearContent()'/>
+<img src="yuvi.jpg" height="95" width="80" onmouseover='getContent("yuvi.html")' onmouseout='clearContent()'/>
+<img src="veeru.jpg" height="95" width="80" onmouseover='getContent("veeru.html")' onmouseout='clearContent()'/>
+<img src="dhoni.jpg" height="95" width="80" onmouseover='getContent("dhoni.html")' onmouseout='clearContent()'/>
+<div class="box" id="contentArea"/>
+</body>
+</html>
+
+
+

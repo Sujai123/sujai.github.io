@@ -1,0 +1,49 @@
+table{
+	background-color:white;
+	font-size:20;
+}
+body{
+	color:red;
+	background-image:url("Hospital.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:100% 100%;
+}
+input[type="submit"].a:hover{
+	cursor:pointer;
+	background:orange;
+	color:red;
+}
+input[type="submit"].b:hover{
+	cursor:pointer;
+}
+input[type="submit"].a{
+	border:none;
+	width:100%;
+	height:100%;
+	background-color:white;
+	font-size:25px;
+	color:red;
+	border-radius:30px;
+}
+input[type="submit"].b{
+	border:none;
+	background-color:blue;
+	font-size:25px;
+	color:white;
+	border-radius:30px;
+}
+input[type="reset"]:hover{
+	cursor:pointer;
+	background:orange;
+	color:red;
+}
+input[type="reset"]{
+	border:none;
+	width:100%;
+	height:100%;
+	background-color:white;
+	font-size:25px;
+	color:red;
+	border-radius:30px;
+}

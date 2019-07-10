@@ -1,0 +1,124 @@
+<html>
+   <head>
+   <title>Online Appointment Form</title>
+      <style>
+	  body
+	  {
+	  background-color:powderblue;
+	  }
+	  </style>
+	  <link rel="stylesheet" type="text/css" href="formstyle.css">
+	  <script type="text/Javascript">
+            function calculate()
+            {   var first_name=document.getElementById('first_name');
+                var last_name=document.getElementById('last_name');
+                var reg_no=document.getElementById('reg_no');
+                var address=document.getElementById('address');
+                var city=document.getElementById('city');
+                var specialist=document.getElementById('specialist');
+                var date=document.getElementById('date');
+                var time=document.getElementById('time');
+				var email=document.getElementById('email');
+				var age=document.getElementById('age');
+				
+				if(!((first_name.value>='a'&&first_name.value<='z')||(first_name.value>='A'&&first_name.value<='Z'))){alert("pls enter valid first name");return false;}
+                if(!((last_name.value>='a'&&last_name.value<='z')||(last_name.value>='A'&&last_name.value<='Z'))){alert("pls enter valid last name");return false;}
+                if(!(reg_no.value>=10000&&reg_no.value<=99999)){alert("pls enter valid 5-digit register number");return false;}
+                if(address.value == 0 ){alert("pls enter address");return false;}
+				//if((form.gender[0].checked==false)&&(form.gender[1].checked==false)){alert("Please select gender");return false;}
+                if(city.value == -1 ){alert("pls select city");return false;}
+                if(specialist.value == -1 ){alert("pls select specialist");return false;}
+                if(date.value == 0 ){alert("pls enter date");return false;}
+				if(time.value == 0 ){alert("pls enter time");return false;}
+				if(email.value == 0 ){alert("pls enter email");return false;}
+				if(!(age.value>0&&age.value<100) ){alert("pls enter valid age");return false;}
+                }
+</script>
+   </head>
+	
+   <body>
+      <form action="http://localhost:8080/examples/servlets/servlet/form" method="get">
+	  <center>
+	  <table cellpadding="20px">
+	  <tr><td colspan='2' align="center"><b>Online Appointment Form</b></td></tr>
+	  <tr>
+         <td>First name:</td>
+		 <td><input type = "text" id = "first_name" name="first_name"></td>
+      </tr>
+	  <tr>
+         <td>Last name:</td>
+		 <td><input type = "text" id = "last_name" name="last_name"></td>
+		</tr>
+		<tr>
+		<td>Register Number:</td>
+		<td><input type="text" id="reg_no" name="reg_no"></td>
+		</tr>
+		<tr>
+		 <td>Portal Address:</td>
+		 <td><input type="textarea" id="address" name="address"></textarea></td>
+		 </tr>
+		 <tr>
+		 <td>Gender:</td>
+		 <td><input type="radio" name="gender" value="male">Male
+			 <input type="radio" name="gender" value="female">Female
+		</td>
+		</tr>
+		<tr>
+		<td>City:</td>
+		<td><select id="city" name='city'>
+		<option value="-1" selected>Select</option>
+		<option value="newdelhi" >NewDelhi</option>
+		<option value="mumbai" >Mumbai</option>
+		<option value="tamilnadu">Tamil Nadu</option>
+		</select></td>
+		</tr>
+		<tr>
+		<td>Specialist</td>
+		<td><select id="specialist" name="specialist">
+		<option value="-1" selected>Select</option>
+		<option value="optamologist">Optamologist</option>
+		<option value="neurologist">Neurologist</option>
+		<option value="cardiologist">Cardiologist</option>
+		<option value="child">Child specialist</option>
+		<option value="orthologist">Orthologist</option>
+		</td>
+		</tr>
+		<tr>
+		<td>Date:</td>
+		<td><input type="date" id="date" name="date"></td>
+		</tr>
+		<tr>
+		<td>Time:</td>
+		<td><input type="time" id="time" name="time"></td>
+		</tr>
+		<tr>
+		<td>email-ID:</td>
+		<td><input type="text" id="email" name="email"></td>
+		</tr>
+		<tr>
+		<td>Age:</td>
+		<td><input type="text" id="age" name="age"></td>
+		</tr>
+		<tr>
+		<td colspan='2' >Once you click the <i>Make the appointment</i> button you cannot change it</td>
+		</tr>
+		<td><input type="submit" class="a" value="Make the appointment" onclick="calculate();"></td>
+		<td><input type="reset" value="Reset"></td>
+		</tr>
+		</table>
+		</center>
+      </form>
+	  <form action="http://localhost:8080/examples/servlets/servlet/display" method="GET">
+	  <center>
+	  <input type="submit" class="b" value="Click here to view previous appointments">
+	  </center>
+	  </form>
+	  <center>
+	  <img src="Home.jpg" width="120px" height="40px" usemap="#homemap">
+	  </center>
+	  <map name="homemap">
+	  <area shape="rectangle" coords="0,0,120px,40px" href="project.html">
+	  </map>
+   </body>
+	
+</html>
